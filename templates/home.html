@@ -1,0 +1,295 @@
+<!--CHATGPT RESPONSIVE-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <title>ChatMind AI Text Generator</title>
+    <link
+      rel="shortcut icon"
+      href="https://devisionx.com/wp-content/uploads/2017/12/deep-learning-e1517187135618.jpg"
+      type="image/x-icon"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-image: url("https://img.freepik.com/free-vector/white-technology-background_23-2148390327.jpg?w=996&t=st=1676666941~exp=1676667541~hmac=93b5ed0bdcee7826bbaf9e7b5dd13fd435f52bac54af47fef591a9e0f347791e");
+        background-size: cover;
+        background-position: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      h1,
+      h2,
+      a {
+        text-align: center;
+        color: #06060696;
+        text-decoration: dashed;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 30px auto;
+        max-width: 800px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+        padding: 20px;
+        width: 80%;
+      }
+
+      label {
+        font-weight: bold;
+        color: #1a1919ce;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        font-size: 18px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+      @media (max-width: 768px) {
+        input[type="text"] {
+          font-size: 16px;
+          padding: 8px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        input[type="text"] {
+          font-size: 14px;
+          padding: 6px;
+        }
+      }
+
+      button[type="submit"],
+      button[type="button"] {
+        background-color: #1b1c1b9f;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      @media (max-width: 768px) {
+        button[type="submit"],
+        button[type="button"] {
+          font-size: 16px;
+          padding: 8px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        button[type="submit"],
+        button[type="button"] {
+          font-size: 14px;
+          padding: 6px;
+        }
+      }
+
+      button[type="submit"]:hover,
+      button[type="button"]:hover,
+      a:hover {
+        background-color: #1b1c1b6b;
+      }
+
+      p {
+        margin: 30px auto;
+        max-width: 800px;
+        font-size: 18px;
+        line-height: 1.5;
+        padding: 20px;
+        background-color: #f2f2f2;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 80%;
+      }
+
+      @media (max-width: 768px) {
+        p {
+          max-width: 500px;
+          font-size: 16px;
+          padding: 10px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        p {
+          max-width: 300px;
+          font-size: 16px;
+          padding: 10px;
+        }
+      }
+      footer {
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        color: #333;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+      img {
+        height: 20px;
+        width: 20px;
+      }
+
+      @media (max-width: 768px) {
+        form {
+          max-width: 500px;
+        }
+
+        input[type="text"] {
+          font-size: 16px;
+        }
+
+        button[type="submit"],
+        button[type="button"] {
+          font-size: 16px;
+        }
+
+        p {
+          max-width: 500px;
+          font-size: 16px;
+          padding: 10px;
+        }
+      }
+        h4{
+          font-weight: 200;        }
+
+      @media (max-width: 480px) {
+        form {
+          max-width: 300px;
+        }
+
+        input[type="text"] {
+          font-size: 14px;
+          padding: 8px;
+        }
+
+        button[type="submit"],
+        button[type="button"] {
+          font-size: 14px;
+          padding: 8px 16px;
+        }
+
+        p {
+          max-width: 300px;
+          font-size: 14px;
+          padding: 10px;
+        }
+        footer {
+          background-color: #eee;
+          padding: 10px 0;
+          position: fixed;
+          bottom: 0;
+          width: 100%;
+        }
+
+        .container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          max-width: 800px;
+          margin: 0 auto;
+        }
+
+        .container p {
+          margin: 0;
+        }
+
+        .social-icons {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .social-icons a {
+          margin-left: 10px;
+        }
+
+        .social-icons img {
+          height: 20px;
+          width: 20px;
+        }
+        .points {
+          margin: 20px;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          text-align: left;
+          max-width: 600px;
+        }
+
+        .points h3 {
+          font-size: 24px;
+          margin-bottom: 10px;
+        }
+
+        @media (max-width: 600px) {
+          .points {
+            margin: 10px;
+            font-size: 16px;
+          }
+
+          .points h3 {
+            font-size: 20px;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ChatMind AI Text Generator</h1>
+    <form action="/get-api-key" method="post">
+      <h2>Enter your OpenAI API key:</h2>
+      <input type="text" name="api_key" /><br /><br />
+      <button type="submit" value="Submit">Submit API key</button>
+    </form>
+    <h2>
+      To get your API key
+      <a href="https://platform.openai.com/account/api-keys">click here</a>
+    </h2>
+    <center>
+    <div >
+      <h3>Note <span style="color: red
+      ;">*</span></h3>
+      <h4> 1. This website does not save your API key information.</h4>
+      <h4> 2. Keep your API key confidential, Do not share your API key to anyone.
+      <h4>3. If you enter the correct API key then only you'll be able to use ChatMind AI.</h4>
+
+      
+    </div>
+    </center>
+
+    <footer>
+      <div class="container">
+        <p>Copyright &copy; 2023 Built by FARAAZ AHMED C</p>
+        <div class="social-icons">
+          <a href="https://github.com/FaraazAhmedC">
+            <img src="https://github.com/fluidicon.png" alt="GitHub Logo" />
+          </a>
+          <a href="https://www.linkedin.com/in/faraaz-ahmed-c">
+            <img
+              src="https://w7.pngwing.com/pngs/887/616/png-transparent-linkedin-icon-linkedin-text-rectangle-logo-thumbnail.png"
+              alt="LinkedIn Logo"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
