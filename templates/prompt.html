@@ -259,13 +259,16 @@
           }
         }
       }
+      input[type="text"]::placeholder {
+        color: rgba(0, 0, 0, 0.3);
+      }
     </style>
   </head>
   <body>
-    <h1>ChatMind AI Text Generator</h1>
+    <h1>  ChatMind AI Text Generator</h1>
     <form action="/generate-response" method="POST">
       <h2><label for="prompt">Enter your prompt:</label></h2>
-      <input type="text" name="prompt" id="prompt" />
+      <input type="text" name="prompt" id="prompt-input" required placeholder="" />
       <button type="submit" value="Generate">Generate Text</button>
     </form>
     <center>
@@ -294,6 +297,20 @@
       function clearResponse() {
         document.querySelector("p").remove();
       }
+      // Array of placeholder messages
+      var placeholders = [
+        "Explain quantum computing in simple terms",
+        "Write a mail to HR",
+        "How to make briyani",
+        "What's the weather up in Vaniyambadi",
+        "Find the largest number using python"
+      ];
+
+      // Select a random placeholder message
+      var randomPlaceholder = placeholders[Math.floor(Math.random() * placeholders.length)];
+
+      // Set the random placeholder message as the placeholder attribute of the input element
+      document.getElementById("prompt-input").placeholder = randomPlaceholder;
     </script>
   </body>
 </html>

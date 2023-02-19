@@ -250,13 +250,16 @@
           }
         }
       }
+      input[type="text"]::placeholder {
+        color: rgba(0, 0, 0, 0.3);
+      }
     </style>
   </head>
   <body>
     <h1>ChatMind AI Text Generator</h1>
     <form action="/get-api-key" method="post">
       <h2>Enter your OpenAI API key:</h2>
-      <input type="text" name="api_key" /><br /><br />
+      <input type="text" name="api_key" required placeholder="eg: sk-abc123def456ghi789jkl012mno345pqr6"/><br /><br />
       <button type="submit" value="Submit">Submit API key</button>
     </form>
     <h2>
@@ -265,11 +268,10 @@
     </h2>
     <center>
     <div >
-      <h3>Note <span style="color: red
-      ;">*</span></h3>
+      <h3>Note<span>*</span></h3>
       <h4> 1. This website does not save your API key information.</h4>
       <h4> 2. Keep your API key confidential, Do not share your API key to anyone.
-      <h4>3. If you enter the correct API key then only you'll be able to use ChatMind AI.</h4>
+      <h4>3. If you enter the correct API key then only you'll be able to use ChatMind AI.</h4><br><br><br><br>
 
       
     </div>
